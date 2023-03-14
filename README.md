@@ -21,3 +21,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Deploy a docker image
 
 If you want to deploy the application as a docker container, there is a ready to go dockerfile, but there is one thing to have in count, ports must be the same in the host and the container, `3000` for the json-server and `80` for the application.
+
+The base url site is `http://localhost`, which redirects automatically to the english site `http://localhost/en/main`

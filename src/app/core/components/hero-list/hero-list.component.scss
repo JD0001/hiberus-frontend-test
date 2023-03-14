@@ -1,0 +1,44 @@
+.card-stylized {
+	margin: 20px 20px;
+	box-shadow: 10px 5px 20px 1px;
+}
+.button-filter {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: max-content;
+	margin: 5px;
+	p {
+		margin: 0px;
+		padding: 0px;
+	}
+}
+
+#home-button {
+	margin: 20px 0px 5px 20px;
+}
+
+mat-table {
+	overflow-x: scroll;
+}
+
+#table-manipulators {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+
+	.manipulator-card {
+		width: fit-content;
+	}
+}
+
+#filters-container {
+	.filter-item {
+		margin: 0 20px;
+	}
+}
+
+#table-row-nodata {
+	text-align: center;
+}

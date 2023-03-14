@@ -1,0 +1,98 @@
+
+<button mat-raised-button id="home-button" color="primary" routerLink="/main"><mat-icon>home</mat-icon><p i18n>Return to home</p></button>
+<section id="table-manipulators">
+	<mat-card id="table-filters-card" class="card-stylized manipulator-card">
+		<mat-card-header>
+			<mat-card-title>
+				<h3 i18n> Filter the heroes as you wish</h3>
+			</mat-card-title>
+			<mat-card-subtitle>
+				<h4 i18n>Use a single filter or either combine some of them to make a more restrictive filtering</h4>
+			</mat-card-subtitle>
+		</mat-card-header>
+		<mat-card-content id="filters-container">
+			<form></form>
+			<mat-form-field class="filter-item">
+				<mat-label i18n>Filter hero by alias</mat-label>
+				<input matInput name="hero-alias" type="text" i18n-placeholder
+					placeholder="For example: 'Spider'" [(ngModel)]="heroesFilter.alias">
+			</mat-form-field>
+			<mat-form-field class="filter-item">
+				<mat-label i18n>Filter hero by name</mat-label>
+				<input matInput name="hero-name" type="text" i18n-placeholder
+					placeholder="For example: 'Steve'" [(ngModel)]="heroesFilter.name">
+			</mat-form-field>
+			<mat-form-field class="filter-item">
+				<mat-label i18n>Filter hero by country ISO</mat-label>
+				<input matInput name="hero-country" type="text" i18n-placeholder
+					placeholder="For example: 'USA'" [(ngModel)]="heroesFilter.country">
+			</mat-form-field>
+		</mat-card-content>
+		<mat-card-actions>
+			<button class="button-filter" mat-raised-button color="primary" (click)="updateFromDBFiltered()">
+				<mat-icon>filter_alt</mat-icon>
+				<p i18n>Apply filter</p>
+			</button>
+			<button class="button-filter" mat-raised-button color="primary" (click)="updateFromDB()">
+				<mat-icon>update</mat-icon>
+				<p i18n>Refresh list from database</p>
+			</button>
+		</mat-card-actions>
+	</mat-card>
+	<mat-card id="table-actions-card" class="card-stylized manipulator-card">
+		<mat-card-header>
+			<mat-card-title>
+				<h3 i18n>Actions</h3>
+			</mat-card-title>
+			<mat-card-subtitle>
+				<h4 i18n>Shown data in the table can be edited with the corresponding controls</h4>
+			</mat-card-subtitle>
+		</mat-card-header>
+		<mat-card-actions>
+			<button class="top-row-margins" mat-raised-button color="primary" (click)="createHero()" i18n>Create
+				Hero</button>
+		</mat-card-actions>
+		<mat-card-content>
+			<i>*</i>
+			<i i18n>For editing or deleting a hero, please use the embedded buttons availables for each one.</i>
+		</mat-card-content>
+	</mat-card>
+</section>
+<mat-card id="card-table" class="card-stylized">
+	<mat-card-content>
+		<mat-paginator #listPaginator [length]="heroesList.data.length" [pageSize]="5"
+			[pageSizeOptions]="[3,5,50,100]"></mat-paginator>
+		<mat-table matSort [dataSource]="heroesList">
+			<ng-container matColumnDef="alias">
+				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Alias</mat-header-cell>
+				<mat-cell *matCellDef="let hero">{{hero.alias | uppercase}}</mat-cell>
+			</ng-container>
+			<ng-container matColumnDef="name">
+				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Name</mat-header-cell>
+				<mat-cell *matCellDef="let hero">{{hero.name}}</mat-cell>
+			</ng-container>
+			<ng-container matColumnDef="country">
+				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Country</mat-header-cell>
+				<mat-cell *matCellDef="let hero">{{hero.country}}</mat-cell>
+			</ng-container>
+			<ng-container matColumnDef="actions">
+				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Actions</mat-header-cell>
+				<mat-cell *matCellDef="let hero">
+					<button mat-button (click)="editHero(hero)">
+						<mat-icon>edit</mat-icon>
+					</button>
+					<button mat-button (click)="deleteHero(hero)">
+						<mat-icon>delete</mat-icon>
+					</button>
+				</mat-cell>
+			</ng-container>
+
+			<mat-header-row *matHeaderRowDef="columnsList"></mat-header-row>
+			<mat-row *matRowDef="let rowData; columns: columnsList"></mat-row>
+
+			<div *matNoDataRow id="table-row-nodata">
+				<p i18n>There aren't any results</p>
+			</div>
+		</mat-table>
+	</mat-card-content>
+</mat-card>

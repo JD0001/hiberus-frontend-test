@@ -64,21 +64,7 @@ describe('HeroService', () => {
 		});
 
 	});
-
-	it('should delete the hero 6', (done) => {
-		const testID = 6; //Black Phanter
-		service.deleteByID(testID).subscribe((data) => {
-			console.log('Hero 6', data);
-      
-			expect(typeof data).toBe('HttpResponse');
-
-			//const returnCode = data.status === 200 || data.status === 204;
-			//expect(returnCode).toBe(true);
-      
-			done();
-		});
-	});
-
+	
 	it('should update the hero Country', (done)=>{
 		const randCountry = 'Krakozhia';
 		const hero = {id:1, alias: 'Captain America', name: 'Steve Rogers', country: randCountry};

@@ -1,13 +1,12 @@
 <div class="overlay" *ngIf="isLoading | async">
-	<p class="style-background" i18n>Please, wait while we talk with the backend</p>
+	<p class="style-background">{{'LOADER.WAIT' | translate }}</p>
 	<mat-spinner id="spinner"></mat-spinner>
 </div>
 
 <div #errorBlock class="overlay" *ngIf="errorReceived | async">
 	<mat-icon class="style-background">error</mat-icon>
 	<div id="message-div">
-	<p class="style-background" i18n>
-		There wasn't any response from the backend
+	<p class="style-background">{{'LOADER.NO_RESPONSE' | translate }}
 	</p>
 	<mat-progress-bar #errorBar mode="determinate" [value]="errorBarValue"
 		(animationEnd)="hideErrorBlock()"></mat-progress-bar>

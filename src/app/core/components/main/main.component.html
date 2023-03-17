@@ -1,6 +1,6 @@
 <header>
 	<section id="title">
-		<h1 class="centered-text" i18n>Welcome to the heroes application</h1>
+		<h1 class="centered-text">{{'MAIN.WELCOME' | translate }}</h1>
 	</section>
 	<section id="language-selection">
 		<button mat-fab [matMenuTriggerFor]="langSelector"><mat-icon>language</mat-icon></button>
@@ -13,67 +13,60 @@
 
 <body>
 	<section class="center-childs">
-		<p id="paragraph-intro" class="centered-text" i18n>This application is a simple example of some of the features
-			that Angular
-			provides for developing, in
-			this case, single page applications</p>
+		<p id="paragraph-intro" class="centered-text">{{'MAIN.SYNOPSIS' | translate }}</p>
 	</section>
 	<section id="wrappable-section">
 		<mat-card id="card-explanation">
 			<mat-card-header>
 				<mat-card-title>
-					<h1 i18n>What's this about?</h1>
+					<h1>{{'MAIN.TITLE_WHAT' | translate }}</h1>
 				</mat-card-title>
 				<mat-card-subtitle>
-					<h5 i18n>A short explanation about the case</h5>
+					<h5>{{'MAIN.TITLE_CASE' | translate }}</h5>
 				</mat-card-subtitle>
 			</mat-card-header>
 			<mat-card-content>
-				<p id="paragraph-explanation" class="centered-text paragraph-narrow" i18n>The main feature of the
-					application revolves around a heroes
-					list, similar to the Angular introductory
-					tutorial used for introduce itself. This app includes a really simple REST backend with some mocked
-					data and some interaction with that information. It implements the following concepts</p>
+				<p id="paragraph-explanation" class="centered-text paragraph-narrow">{{'MAIN.FEATURES' | translate }}</p>
 			</mat-card-content>
 			<mat-card-actions id="actions">
-				<button routerLink="/heroes" mat-raised-button color="primary" i18n>Check out the heroes list</button>
+				<button routerLink="/heroes" mat-raised-button color="primary">{{'MAIN.CHECK_LIST' | translate }}</button>
 			</mat-card-actions>
 		</mat-card>
 		<mat-card id="features-card">
 			<mat-list id="features-list">
 				<mat-list-item>
 					<a href="https://angular.io/api/core/Component" target="_blank">
-						<p i18n>Components</p>
+						<p>{{'MAIN.COMPONENTS' | translate }}</p>
 					</a>
 				</mat-list-item>
 				<mat-list-item>
 					<a href="https://angular.io/guide/creating-injectable-service" target="_blank">
-						<p i18n>Services</p>
+						<p>{{'MAIN.SERVICES' | translate }}</p>
 					</a>
 				</mat-list-item>
 				<mat-list-item>
 					<a href="https://angular.io/api/core/Pipe" target="_blank">
-						<p i18n>Pipes</p>
+						<p>{{'MAIN.PIPES' | translate }}</p>
 					</a>
 				</mat-list-item>
 				<mat-list-item>
 					<a href="https://angular.io/guide/lazy-loading-ngmodules" target="_blank">
-						<p i18n>Lazy loading</p>
+						<p>{{'MAIN.LAZY_LOADING' | translate }}</p>
 					</a>
 				</mat-list-item>
 				<mat-list-item>
 					<a href="https://angular.io/cli/test" target="_blank">
-						<p i18n>Testing</p>
+						<p>{{'MAIN.TESTING' | translate }}</p>
 					</a>
 				</mat-list-item>
 				<mat-list-item>
 					<a href="https://angular.io/api/common/http/HttpClient" target="_blank">
-						<p i18n>HTTPClient module</p>
+						<p>{{'MAIN.HTTPCLIENT_MODULE' | translate }}</p>
 					</a>
 				</mat-list-item>
 				<mat-list-item>
 					<a href="https://material.angular.io/" target="_blank">
-						<p i18n>Angular material library</p>
+						<p>{{'MAIN.ANGULAR_MATERIAL_LIB' | translate }}</p>
 					</a>
 				</mat-list-item>
 			</mat-list></mat-card>

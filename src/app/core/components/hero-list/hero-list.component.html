@@ -1,60 +1,62 @@
-
-<button mat-raised-button id="home-button" color="primary" routerLink="/main"><mat-icon>home</mat-icon><p i18n>Return to home</p></button>
+<button mat-raised-button id="home-button" color="primary" routerLink="/main"><mat-icon>home</mat-icon>
+	<p>{{'HERO_LIST.BACK_TO_HOME' | translate }}</p>
+</button>
 <section id="table-manipulators">
 	<mat-card id="table-filters-card" class="card-stylized manipulator-card">
 		<mat-card-header>
 			<mat-card-title>
-				<h3 i18n> Filter the heroes as you wish</h3>
+				<h3>{{'HERO_LIST.FILTER_AS_DESIRED' | translate }}</h3>
 			</mat-card-title>
 			<mat-card-subtitle>
-				<h4 i18n>Use a single filter or either combine some of them to make a more restrictive filtering</h4>
+				<h4>{{'HERO_LIST.FILTER_ONE_OR_MORE' | translate }}</h4>
 			</mat-card-subtitle>
 		</mat-card-header>
 		<mat-card-content id="filters-container">
 			<form></form>
 			<mat-form-field class="filter-item">
-				<mat-label i18n>Filter hero by alias</mat-label>
-				<input matInput name="hero-alias" type="text" i18n-placeholder
-					placeholder="For example: 'Spider'" [(ngModel)]="heroesFilter.alias">
+				<mat-label>{{'HERO_LIST.FILTER_BY_ALIAS' | translate }}</mat-label>
+				<input matInput name="hero-alias" type="text"
+					placeholder="{{'HERO_LIST.FILTER_ALIAS_EXAMPLE' | translate }}" [(ngModel)]="heroesFilter.alias">
 			</mat-form-field>
 			<mat-form-field class="filter-item">
-				<mat-label i18n>Filter hero by name</mat-label>
-				<input matInput name="hero-name" type="text" i18n-placeholder
-					placeholder="For example: 'Steve'" [(ngModel)]="heroesFilter.name">
+				<mat-label>{{'HERO_LIST.FILTER_BY_NAME' | translate }}</mat-label>
+				<input matInput name="hero-name" type="text"
+					placeholder="{{'HERO_LIST.FILTER_NAME_EXAMPLE' | translate }}" [(ngModel)]="heroesFilter.name">
 			</mat-form-field>
 			<mat-form-field class="filter-item">
-				<mat-label i18n>Filter hero by country ISO</mat-label>
-				<input matInput name="hero-country" type="text" i18n-placeholder
-					placeholder="For example: 'USA'" [(ngModel)]="heroesFilter.country">
+				<mat-label>{{'HERO_LIST.FILTER_BY_COUNTRY' | translate }}</mat-label>
+				<input matInput name="hero-country" type="text"
+					placeholder="{{'HERO_LIST.FILTER_COUNTRY_EXAMPLE' | translate }}"
+					[(ngModel)]="heroesFilter.country">
 			</mat-form-field>
 		</mat-card-content>
 		<mat-card-actions>
 			<button class="button-filter" mat-raised-button color="primary" (click)="updateFromDBFiltered()">
 				<mat-icon>filter_alt</mat-icon>
-				<p i18n>Apply filter</p>
+				<p>{{'HERO_LIST.FILTER_APPLY' | translate }}</p>
 			</button>
 			<button class="button-filter" mat-raised-button color="primary" (click)="updateFromDB()">
 				<mat-icon>update</mat-icon>
-				<p i18n>Refresh list from database</p>
+				<p>{{'HERO_LIST.LIST_REFRESH' | translate }}</p>
 			</button>
 		</mat-card-actions>
 	</mat-card>
 	<mat-card id="table-actions-card" class="card-stylized manipulator-card">
 		<mat-card-header>
 			<mat-card-title>
-				<h3 i18n>Actions</h3>
+				<h3>{{'HERO_LIST.ACTIONS' | translate }}</h3>
 			</mat-card-title>
 			<mat-card-subtitle>
-				<h4 i18n>Shown data in the table can be edited with the corresponding controls</h4>
+				<h4>{{'HERO_LIST.ACTIONS_TIP' | translate }}</h4>
 			</mat-card-subtitle>
 		</mat-card-header>
 		<mat-card-actions>
-			<button class="top-row-margins" mat-raised-button color="primary" (click)="createHero()" i18n>Create
-				Hero</button>
+			<button class="top-row-margins" mat-raised-button color="primary"
+				(click)="createHero()">{{'HERO_LIST.ACTIONS_CREATE_HERO' | translate }}</button>
 		</mat-card-actions>
 		<mat-card-content>
 			<i>*</i>
-			<i i18n>For editing or deleting a hero, please use the embedded buttons availables for each one.</i>
+			<i>{{'HERO_LIST.ACTIONS_EDIT_TIP' | translate }}</i>
 		</mat-card-content>
 	</mat-card>
 </section>
@@ -64,19 +66,19 @@
 			[pageSizeOptions]="[3,5,50,100]"></mat-paginator>
 		<mat-table matSort [dataSource]="heroesList">
 			<ng-container matColumnDef="alias">
-				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Alias</mat-header-cell>
+				<mat-header-cell *matHeaderCellDef mat-sort-header>{{'HERO.ALIAS' | translate }}</mat-header-cell>
 				<mat-cell *matCellDef="let hero">{{hero.alias | uppercase}}</mat-cell>
 			</ng-container>
 			<ng-container matColumnDef="name">
-				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Name</mat-header-cell>
+				<mat-header-cell *matHeaderCellDef mat-sort-header>{{'HERO.NAME' | translate }}</mat-header-cell>
 				<mat-cell *matCellDef="let hero">{{hero.name}}</mat-cell>
 			</ng-container>
 			<ng-container matColumnDef="country">
-				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Country</mat-header-cell>
+				<mat-header-cell *matHeaderCellDef mat-sort-header>{{'HERO.COUNTRY' | translate }}</mat-header-cell>
 				<mat-cell *matCellDef="let hero">{{hero.country}}</mat-cell>
 			</ng-container>
 			<ng-container matColumnDef="actions">
-				<mat-header-cell *matHeaderCellDef mat-sort-header i18n>Actions</mat-header-cell>
+				<mat-header-cell *matHeaderCellDef mat-sort-header>{{'HERO_LIST.ACTIONS' | translate }}</mat-header-cell>
 				<mat-cell *matCellDef="let hero">
 					<button mat-button (click)="editHero(hero)">
 						<mat-icon>edit</mat-icon>
@@ -91,7 +93,7 @@
 			<mat-row *matRowDef="let rowData; columns: columnsList"></mat-row>
 
 			<div *matNoDataRow id="table-row-nodata">
-				<p i18n>There aren't any results</p>
+				<p>{{'HERO_LIST.LIST_NO_RESULTS' | translate }}</p>
 			</div>
 		</mat-table>
 	</mat-card-content>

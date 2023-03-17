@@ -10,14 +10,6 @@
 					"style": "scss"
 				}
 			},
-			"i18n": {
-				"sourceLocale": "en",
-				"locales": {
-					"es": {
-						"translation": "src/assets/locale/messages.es-ES.xlf"
-					}
-				}
-			},
 			"root": "",
 			"sourceRoot": "src",
 			"prefix": "app",
@@ -25,7 +17,6 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"localize": true,
 						"outputPath": "dist/hiberus-frontend-test",
 						"index": "src/index.html",
 						"main": "src/main.ts",
@@ -59,9 +50,6 @@
 							"extractLicenses": false,
 							"sourceMap": true,
 							"namedChunks": true
-						},
-						"es": {
-							"localize": ["es"]
 						}
 					},
 					"defaultConfiguration": "production"
@@ -74,9 +62,6 @@
 						},
 						"development": {
 							"browserTarget": "hiberus-frontend-test:build:development"
-						},
-						"es": {
-							"browserTarget": "hiberus-frontend-test:build:development,es"
 						}
 					},
 					"defaultConfiguration": "development"

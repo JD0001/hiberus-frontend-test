@@ -12,14 +12,12 @@ COPY . .
 RUN npm install 
 ### COMPILE ALL LOCALIZATIONS
 
-RUN npm run build
-RUN npm run build --configuration=es
+RUN npm run build --configuration=production
 
 ### STAGE 2: Setup http server ###
 FROM nginx:stable-alpine
 
-COPY --from=base_image /app/dist/hiberus-frontend-test/en /usr/share/nginx/html/en
-COPY --from=base_image /app/dist/hiberus-frontend-test/es /usr/share/nginx/html/es
+COPY --from=base_image /app/dist/hiberus-frontend-test/ /usr/share/nginx/html/
 
 COPY ./src/app/shared/mocks/ /usr/share/jsonserver/db/
 

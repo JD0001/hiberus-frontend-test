@@ -1,0 +1,59 @@
+{
+	"MAIN": {
+		"WELCOME": "Welcome to the heroes application",
+		"SYNOPSIS": "This application is a simple example of some of the features that Angular provides for developing, in this case, single page applications",
+		"TITLE_WHAT": "What's this about?",
+		"TITLE_CASE": "A short explanation about the case",
+		"FEATURES": "The main feature of the application revolves around a heroes list, similar to the Angular introductory tutorial used for introduce itself. This app includes a really simple REST backend with some mocked data and some interaction with that information. It implements the following concepts",
+		"CHECK_LIST": "Check out the heroes list",
+		"COMPONENTS": "Components",
+		"SERVICES": "Services",
+		"PIPES": "Pipes",
+		"LAZY_LOADING": "Lazy loading",
+		"TESTING": "Testing",
+		"HTTPCLIENT_MODULE": "HTTPClient module",
+		"ANGULAR_MATERIAL_LIB": "Angular material library"
+	},
+	"HERO_LIST": {
+		"BACK_TO_HOME": "Return to home",
+		"FILTER_AS_DESIRED": " Filter the heroes as you wish",
+		"FILTER_ONE_OR_MORE": "Use a single filter or either combine some of them to make a more restrictive filtering",
+		"FILTER_BY_ALIAS": "Filter hero by alias",
+		"FILTER_ALIAS_EXAMPLE": "For example: 'Spider'",
+		"FILTER_BY_NAME": "Filter hero by name",
+		"FILTER_NAME_EXAMPLE": "For example: 'Steve'",
+		"FILTER_BY_COUNTRY": "Filter hero by country ISO",
+		"FILTER_COUNTRY_EXAMPLE": "For example: 'US'",
+		"FILTER_APPLY": "Apply filter",
+		"LIST_REFRESH": "Refresh list from database",
+		"ACTIONS": "Actions",
+		"ACTIONS_TIP": "Shown data in the table can be edited with the corresponding controls",
+		"ACTIONS_CREATE_HERO": "Create Hero",
+		"ACTIONS_EDIT_TIP": "For editing or deleting a hero, please use the embedded buttons availables for each one.",
+		"LIST_NO_RESULTS": "There aren't any results"
+	},
+	"HERO": {
+		"ALIAS": "Alias",
+		"NAME": "Name",
+		"COUNTRY": "Country"
+	},
+	"LOADER": {
+		"WAIT": "Please, wait while we talk with the backend",
+		"NO_RESPONSE": " There wasn't any response from the backend "
+	},
+	"DIALOG": {
+		"CONFIRM_DELETE": "Are you sure you want to delete the specified hero?",
+		"CANCEL": "Cancel",
+		"CONFIRM": "Confirm",
+		"CREATE_HERO": "Create a new Hero",
+		"TIP_VALIDATIONS": "Please have in count that the information must be compliant with the validations",
+		"TIP_LENGTH_MIN":"Minimum of",
+		"TIP_LENGTH_AND_MAX":"and maximum of",
+		"CHARACTERS":"characters",
+		"ONLY_ALPHABETIC": "USE ONLY ALPHABETIC CHARACTERS!",
+		"LENGTH": "LENGTH",
+		"VALID_COUNTRY": "Two alphabetic char ISO code",
+		"TIP_ISO": "UPPERCASE 2 CHAR ISO CODE (A-Z)",
+		"SAVE": "Save"
+	}
+}

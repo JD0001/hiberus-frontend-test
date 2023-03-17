@@ -1,0 +1,59 @@
+{
+	"MAIN": {
+		"WELCOME": "Bienvenido a la aplicación de héroes",
+		"SYNOPSIS": "Esta aplicación es un simple ejemplo de algunas de las características que Angular proporciona para desarrollar, en este caso, aplicaciones de página única (SPA)",
+		"TITLE_WHAT": "¿De qué va esto?",
+		"TITLE_CASE": "Una corta explicación sobre el caso",
+		"FEATURES": "La característica principal de la aplicación gira entorno una lista de héroes, similar al tutorial introductorio de Angular utilizar para introducirse a sí mismo, que incluye un simple backend REST con algo de información simulada y algunas interacciones con dicha información, por ejemplo, los siguientes conceptos",
+		"CHECK_LIST": "Echa un vistazo a la lista de héroes",
+		"COMPONENTS": "Componentes",
+		"SERVICES": "Servicios",
+		"PIPES": "Tuberías (Pipe)",
+		"LAZY_LOADING": "Carga débil (lazy loading)",
+		"TESTING": "Testing",
+		"HTTPCLIENT_MODULE": "Modulo HTTPClient",
+		"ANGULAR_MATERIAL_LIB": "Libería material para Angular"
+	},
+	"HERO_LIST": {
+		"BACK_TO_HOME": "Volver a inicio",
+		"FILTER_AS_DESIRED": "Filtra los héroes como gustes",
+		"FILTER_ONE_OR_MORE": "Usa un único filtro o combina varios de ellos para hacer un filtrado más preciso",
+		"FILTER_BY_ALIAS": "Filtrar héroe por alias",
+		"FILTER_ALIAS_EXAMPLE": "Por ejemplo: 'Spider'",
+		"FILTER_BY_NAME": "Filtrar héroe por nombre",
+		"FILTER_NAME_EXAMPLE": "Por ejemplo: 'Juan'",
+		"FILTER_BY_COUNTRY": "Filtrar hèroe por código de país ISO",
+		"FILTER_COUNTRY_EXAMPLE": "Por ejemplo: 'ES'",
+		"FILTER_APPLY": "Aplicar filtro",
+		"LIST_REFRESH": "Actualizar lista desde base de datos",
+		"ACTIONS": "Acciones",
+		"ACTIONS_TIP": "La información mostrada puede ser editada con los controles correspondientes",
+		"ACTIONS_CREATE_HERO": "Crear héroe",
+		"ACTIONS_EDIT_TIP": "Para editar o eliminar un héroe, por favor usa los controles embedidos disponibles para cada uno",
+		"LIST_NO_RESULTS": "No se encontraron resultados"
+	},
+	"HERO": {
+		"ALIAS": "Alias",
+		"NAME": "Nombre",
+		"COUNTRY": "País"
+	},
+	"LOADER": {
+		"WAIT": "Por favor, espera mientras nos comunicamos con el backend",
+		"NO_RESPONSE": "No hubo ninguna respuesta desde el servidor"
+	},
+	"DIALOG": {
+		"CONFIRM_DELETE": "¿Estás seguro de que quieres eliminar el héroe especificado?",
+		"CANCEL": "Cancelar",
+		"CONFIRM": "Confirmar",
+		"CREATE": "Crear un héroe nuevo",
+		"TIP_VALIDATIONS": "Por favor, ten en cuenta que la información debe cumplir las validaciones",
+		"TIP_LENGTH_MIN":"Mínimo de",
+		"TIP_LENGTH_AND_MAX":"y máximo de",
+		"CHARACTERS":"carácteres",
+		"ONLY_ALPHABETIC": "!USA SÓLO CARÁCTERES ALFABÉTICOS!",
+		"LENGTH": "TAMAÑO",
+		"VALID_COUNTRY": "Código ISO de dos carácteres alfabéticos",
+		"TIP_ISO": "CÓDIGO ISO DE 2 CARÁCTERES EN MAYÚSCULAS (A-Z)",
+		"SAVE": "Guardar"
+	}
+}

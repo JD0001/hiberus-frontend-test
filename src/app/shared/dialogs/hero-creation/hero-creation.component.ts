@@ -24,7 +24,7 @@ export class HeroCreationComponent {
 	public readonly _NAME_MAX_LENGHT: number = 20;
 
 	public readonly _ISO_CODE_REGEXP: string = '[A-Z]{2}';
-	public readonly _TEXT_REGEXP: string = '[a-zA-Z]+$';
+	public readonly _TEXT_REGEXP: string = '[a-zA-Z ]+$';
 
 	public heroFormGroup: FormGroup = new FormGroup({
 		alias: new FormControl('', [

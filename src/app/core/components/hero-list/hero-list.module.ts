@@ -12,7 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatIconModule} from '@angular/material/icon'; 
+import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
 	declarations: [
@@ -30,7 +31,10 @@ import {MatIconModule} from '@angular/material/icon';
 		FormsModule,
 		MatButtonModule,
 		MatDialogModule,
-		MatIconModule
+		MatIconModule,
+		TranslateModule.forChild({
+			extend: true
+		})
 	],
 	exports: [
 		HeroListComponent

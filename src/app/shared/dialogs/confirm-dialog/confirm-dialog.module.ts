@@ -9,6 +9,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -23,7 +24,10 @@ import { MatInputModule } from '@angular/material/input';
 		MatButtonModule,
 		MatCardModule,
 		MatDialogModule,
-		MatFormFieldModule
+		MatFormFieldModule,
+		TranslateModule.forChild({
+			extend: true
+		})
 	]
 })
 export class ConfirmDialogModule { }

@@ -9,6 +9,8 @@ import { HeroListModule } from './core/components/hero-list/hero-list.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderModule } from '@app/shared/components/loader/loader.module';
 import { LoaderInterceptor } from '@app/shared/interceptors/loader.interceptor';
+import { NgxTranslatorModule } from '@app/shared/modules/translator/translate.module';
+
 
 @NgModule({
 	declarations: [
@@ -20,7 +22,8 @@ import { LoaderInterceptor } from '@app/shared/interceptors/loader.interceptor';
 		AppRoutingModule,
 		HttpClientModule,
 		HeroListModule,
-		LoaderModule
+		LoaderModule,
+		NgxTranslatorModule
 	],
 	providers: [{
 		provide: HTTP_INTERCEPTORS,

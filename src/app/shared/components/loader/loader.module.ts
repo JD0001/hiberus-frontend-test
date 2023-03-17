@@ -7,6 +7,7 @@ import { LoaderComponent } from './loader.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
 	declarations: [
@@ -17,7 +18,10 @@ import { MatIconModule } from '@angular/material/icon';
 		LoaderRoutingModule,
 		MatProgressSpinnerModule,
 		MatProgressBarModule,
-		MatIconModule
+		MatIconModule,
+		TranslateModule.forChild({
+			extend: true
+		})
 	],
 	exports: [
 		LoaderComponent

@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -24,8 +25,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 		ReactiveFormsModule,
 		MatCardModule,
 		MatButtonModule,
-		MatDialogModule
-		
+		MatDialogModule,
+		TranslateModule.forChild({
+			extend: true
+		})
+
 	]
 })
 export class HeroCreationModule { }

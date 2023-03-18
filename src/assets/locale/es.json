@@ -47,6 +47,7 @@
 	"DIALOG": {
 		"CONFIRM_DELETE": "¿Estás seguro de que quieres eliminar el héroe especificado?",
 		"CANCEL": "Cancelar",
+		"CLEAR_FIELDS": "Limpiar campos",
 		"CONFIRM": "Confirmar",
 		"CREATE": "Crear un héroe nuevo",
 		"TIP_VALIDATIONS": "Por favor, ten en cuenta que la información debe cumplir las validaciones",

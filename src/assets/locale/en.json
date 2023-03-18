@@ -47,6 +47,7 @@
 	"DIALOG": {
 		"CONFIRM_DELETE": "Are you sure you want to delete the specified hero?",
 		"CANCEL": "Cancel",
+		"CLEAR_FIELDS": "Clear fields",
 		"CONFIRM": "Confirm",
 		"CREATE_HERO": "Create a new Hero",
 		"TIP_VALIDATIONS": "Please have in count that the information must be compliant with the validations",

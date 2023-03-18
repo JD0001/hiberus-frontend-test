@@ -18,10 +18,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
  */
 export class HeroCreationComponent {
 	public readonly _ALIAS_MIN_LENGHT: number = 5;
-	public readonly _ALIAS_MAX_LENGHT: number = 20;
+	public readonly _ALIAS_MAX_LENGHT: number = 30;
 
 	public readonly _NAME_MIN_LENGHT: number = 5;
-	public readonly _NAME_MAX_LENGHT: number = 20;
+	public readonly _NAME_MAX_LENGHT: number = 40;
 
 	public readonly _ISO_CODE_REGEXP: string = '[A-Z]{2}';
 	public readonly _TEXT_REGEXP: string = '[a-zA-Z ]+$';

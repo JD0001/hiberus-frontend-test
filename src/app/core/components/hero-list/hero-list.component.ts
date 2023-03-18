@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ConfirmDialogComponent } from '@app/shared/dialogs/confirm-dialog/confirm-dialog.component';
@@ -8,6 +8,7 @@ import { Hero } from '@app/shared/pojos/Hero';
 import { HeroFilter } from '@app/shared/pojos/HeroFilter';
 import { HeroService } from '@app/shared/services/hero.service';
 import { HeroCreationComponent } from '../../../shared/dialogs/hero-creation/hero-creation.component';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -38,8 +39,9 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 
 	@ViewChild(MatSort) private tableSort!: MatSort;
 	@ViewChild('listPaginator') private tablePaginator!: MatPaginator;
+	private  matPagLocalization: MatPaginatorIntl = new  MatPaginatorIntl();
 
-	public constructor(private heroService: HeroService, private heroFormDialog: MatDialog) { }
+	public constructor(private heroService: HeroService, private heroFormDialog: MatDialog, private translate: TranslateService) { }
 
 	public ngOnInit(): void {
 		this.heroService.getAll().subscribe(heroes => {
@@ -51,6 +53,20 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 		//Assign extra properties to the table
 		this.heroesList.sort = this.tableSort;
 
+		//Localize the paginator
+		this.translate.get('HERO_LIST.PAGINATOR_ITEMS_PER_PAGE').subscribe((res: string) =>{
+			this.matPagLocalization.itemsPerPageLabel = res;
+		});
+
+		this.translate.get('HERO_LIST.PAGINATOR_NEXT_PAGE').subscribe((res: string) =>{
+			this.matPagLocalization.nextPageLabel = res;
+		});
+		this.translate.get('HERO_LIST.PAGINATOR_PREV_PAGE').subscribe((res: string) =>{
+			this.matPagLocalization.previousPageLabel = res;
+		});
+
+		this.tablePaginator._intl = this.matPagLocalization;
+		
 		this.heroesList.paginator = this.tablePaginator;
 	}
 

@@ -1,10 +1,10 @@
 {
 	"MAIN": {
 		"WELCOME": "Bienvenido a la aplicación de héroes",
-		"SYNOPSIS": "Esta aplicación es un simple ejemplo de algunas de las características que Angular proporciona para desarrollar, en este caso, aplicaciones de página única (SPA)",
+		"SYNOPSIS": "Esta aplicación es un simple ejemplo de algunas de las características que Angular proporciona para desarrollar, en este caso, aplicaciones de página única (SPA).",
 		"TITLE_WHAT": "¿De qué va esto?",
 		"TITLE_CASE": "Una corta explicación sobre el caso",
-		"FEATURES": "La característica principal de la aplicación gira entorno una lista de héroes, similar al tutorial introductorio de Angular utilizar para introducirse a sí mismo, que incluye un simple backend REST con algo de información simulada y algunas interacciones con dicha información, por ejemplo, los siguientes conceptos",
+		"FEATURES": "La característica principal de la aplicación gira entorno una lista de héroes, similar al tutorial introductorio de Angular utilizar para introducirse a sí mismo, que incluye un simple backend REST con algo de información simulada y algunas interacciones con dicha información. Implementa los conceptos definidos en la tarjeta contigua.",
 		"CHECK_LIST": "Echa un vistazo a la lista de héroes",
 		"COMPONENTS": "Componentes",
 		"SERVICES": "Servicios",

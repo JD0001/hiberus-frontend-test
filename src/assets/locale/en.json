@@ -1,10 +1,10 @@
 {
 	"MAIN": {
 		"WELCOME": "Welcome to the heroes application",
-		"SYNOPSIS": "This application is a simple example of some of the features that Angular provides for developing, in this case, single page applications",
+		"SYNOPSIS": "This application is a simple example of some of the features that Angular provides for developing, in this case, single page applications.",
 		"TITLE_WHAT": "What's this about?",
 		"TITLE_CASE": "A short explanation about the case",
-		"FEATURES": "The main feature of the application revolves around a heroes list, similar to the Angular introductory tutorial used for introduce itself. This app includes a really simple REST backend with some mocked data and some interaction with that information. It implements the following concepts",
+		"FEATURES": "The main feature of the application revolves around a heroes list, similar to the Angular introductory tutorial used for introduce itself. This app includes a really simple REST backend with some mocked data and some interaction with that information. It implements the concepts defined next to this card.",
 		"CHECK_LIST": "Check out the heroes list",
 		"COMPONENTS": "Components",
 		"SERVICES": "Services",

@@ -1,0 +1,2 @@
+#REQUIRED to have installed json-server and available from anywhere (through npm install or added to environment variables)
+json-server --host 0.0.0.0 .\src\app\shared\mocks\db.js --routes .\src\app\shared\mocks\db.routes.json

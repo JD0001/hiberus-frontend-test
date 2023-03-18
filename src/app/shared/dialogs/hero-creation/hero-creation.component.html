@@ -12,7 +12,7 @@
 			<mat-form-field>
 				<mat-label>{{'HERO.ALIAS' | translate }}</mat-label>
 				<input #alias formControlName="alias" matInput type="text" [(ngModel)]="hero.alias"
-					placeholder="{{'DIALOG.TIP_LENGTH_MIN' | translate }} {{_NAME_MIN_LENGHT}} {{'DIALOG.TIP_LENGTH_AND_MAX' | translate }} {{_NAME_MAX_LENGHT}} {{'DIALOG.CHARACTERS' | translate }}">
+					placeholder="{{'DIALOG.TIP_LENGTH_MIN' | translate }} {{_ALIAS_MIN_LENGHT}} {{'DIALOG.TIP_LENGTH_AND_MAX' | translate }} {{_ALIAS_MAX_LENGHT}} {{'DIALOG.CHARACTERS' | translate }}">
 				<mat-hint class="styled-hint" *ngIf="heroFormGroup.get('alias')?.hasError('pattern')" align="start">
 					{{'DIALOG.ONLY_ALPHABETIC' | translate }}
 				</mat-hint>

@@ -24,6 +24,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 If you want to deploy the application as a docker container, there is a ready to go dockerfile, but there is one thing to account, ports must be the same in the host and the container, `3000` for the json-server and `80` for the application.
 
+In the other hand, you can import the image from the releases with `docker import <.tar>`, then launch the application with `docker run hiberusfrontendtest`
+
 The base url site is `http://localhost`.
 
 ## UPDATES

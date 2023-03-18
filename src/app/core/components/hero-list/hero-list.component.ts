@@ -39,34 +39,35 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 
 	@ViewChild(MatSort) private tableSort!: MatSort;
 	@ViewChild('listPaginator') private tablePaginator!: MatPaginator;
-	private  matPagLocalization: MatPaginatorIntl = new  MatPaginatorIntl();
+	private matPagLocalization: MatPaginatorIntl = new MatPaginatorIntl();
 
 	public constructor(private heroService: HeroService, private heroFormDialog: MatDialog, private translate: TranslateService) { }
+
 
 	public ngOnInit(): void {
 		this.heroService.getAll().subscribe(heroes => {
 			this.heroesList.data = heroes;
 		});
+
+		//Localize the paginator
+		this.translate.get([
+			'HERO_LIST.PAGINATOR_ITEMS_PER_PAGE',
+			'HERO_LIST.PAGINATOR_NEXT_PAGE',
+			'HERO_LIST.PAGINATOR_PREV_PAGE']) 
+			.subscribe((result) => {
+				this.matPagLocalization.itemsPerPageLabel = result['HERO_LIST.PAGINATOR_ITEMS_PER_PAGE'];
+				this.matPagLocalization.nextPageLabel = result['HERO_LIST.PAGINATOR_NEXT_PAGE'];
+				this.matPagLocalization.previousPageLabel = result['HERO_LIST.PAGINATOR_NEXT_PAGE'];
+			});
+
+
+		this.tablePaginator._intl = this.matPagLocalization;
 	}
 
 	public ngAfterViewInit(): void {
+
 		//Assign extra properties to the table
 		this.heroesList.sort = this.tableSort;
-
-		//Localize the paginator
-		this.translate.get('HERO_LIST.PAGINATOR_ITEMS_PER_PAGE').subscribe((res: string) =>{
-			this.matPagLocalization.itemsPerPageLabel = res;
-		});
-
-		this.translate.get('HERO_LIST.PAGINATOR_NEXT_PAGE').subscribe((res: string) =>{
-			this.matPagLocalization.nextPageLabel = res;
-		});
-		this.translate.get('HERO_LIST.PAGINATOR_PREV_PAGE').subscribe((res: string) =>{
-			this.matPagLocalization.previousPageLabel = res;
-		});
-
-		this.tablePaginator._intl = this.matPagLocalization;
-		
 		this.heroesList.paginator = this.tablePaginator;
 	}
 

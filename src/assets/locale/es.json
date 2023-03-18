@@ -1,4 +1,7 @@
 {
+	"APP":{
+		"TITLE":"Prueba técnica - Hiberus"
+	},
 	"MAIN": {
 		"WELCOME": "Bienvenido a la aplicación de héroes",
 		"SYNOPSIS": "Esta aplicación es un simple ejemplo de algunas de las características que Angular proporciona para desarrollar, en este caso, aplicaciones de página única (SPA).",

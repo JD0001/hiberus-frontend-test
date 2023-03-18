@@ -1,4 +1,7 @@
 {
+	"APP":{
+		"TITLE":"Technical test - Hiberus"
+	},
 	"MAIN": {
 		"WELCOME": "Welcome to the heroes application",
 		"SYNOPSIS": "This application is a simple example of some of the features that Angular provides for developing, in this case, single page applications.",

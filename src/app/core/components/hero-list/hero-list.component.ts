@@ -85,9 +85,11 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 			disableClose: true,
 			data: {}
 		});
-		diagRef.afterClosed().subscribe(() => {
-			//Should update the list with the filter
-			this.updateFromDB();
+		diagRef.afterClosed().subscribe((update: boolean) => {
+			if (update) {
+				//Should update the list with the filter
+				this.updateFromDB();
+			}
 		});
 	}
 
@@ -100,10 +102,10 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 		const heroCopy: Hero = Object.assign({}, hero);
 
 		const diagRef: MatDialogRef<HeroCreationComponent> = this.heroFormDialog.open(HeroCreationComponent, {
-			disableClose: true, 
+			disableClose: true,
 			data: heroCopy
 		});
-		diagRef.afterClosed().subscribe((update) => {
+		diagRef.afterClosed().subscribe((update: boolean) => {
 			//Should update the list with the filter
 			if (update) {
 				this.updateFromDBFiltered();
@@ -123,7 +125,7 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 			disableClose: true,
 			data: heroCopy
 		});
-		diagRef.afterClosed().subscribe((update) => {
+		diagRef.afterClosed().subscribe((update: boolean) => {
 			//Should update the list with the filter
 			if (update) {
 				this.updateFromDBFiltered();

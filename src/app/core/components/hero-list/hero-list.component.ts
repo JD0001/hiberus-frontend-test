@@ -41,7 +41,9 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 	@ViewChild('listPaginator') private tablePaginator!: MatPaginator;
 	private matPagLocalization: MatPaginatorIntl = new MatPaginatorIntl();
 
-	public constructor(private heroService: HeroService, private heroFormDialog: MatDialog, private translate: TranslateService) { }
+	public constructor(private heroService: HeroService, private heroFormDialog: MatDialog, private translate: TranslateService) {
+
+	}
 
 
 	public ngOnInit(): void {
@@ -49,26 +51,35 @@ export class HeroListComponent implements OnInit, AfterViewInit {
 			this.heroesList.data = heroes;
 		});
 
-		//Localize the paginator
-		this.translate.get([
-			'HERO_LIST.PAGINATOR_ITEMS_PER_PAGE',
-			'HERO_LIST.PAGINATOR_NEXT_PAGE',
-			'HERO_LIST.PAGINATOR_PREV_PAGE']) 
-			.subscribe((result) => {
-				this.matPagLocalization.itemsPerPageLabel = result['HERO_LIST.PAGINATOR_ITEMS_PER_PAGE'];
-				this.matPagLocalization.nextPageLabel = result['HERO_LIST.PAGINATOR_NEXT_PAGE'];
-				this.matPagLocalization.previousPageLabel = result['HERO_LIST.PAGINATOR_NEXT_PAGE'];
-			});
 
-
-		this.tablePaginator._intl = this.matPagLocalization;
+		//When the page is refreshed, get(locale: string) doesn't wait for translation files to be loaded
+		//onLangChange triggers too when the translation gets loaded from the file
+		this.translate.onLangChange.subscribe(() => this.setMatPaginatorStrings());
 	}
 
 	public ngAfterViewInit(): void {
 
+		this.tablePaginator._intl = this.matPagLocalization;
+
 		//Assign extra properties to the table
 		this.heroesList.sort = this.tableSort;
 		this.heroesList.paginator = this.tablePaginator;
+
+		this.setMatPaginatorStrings();
+	}
+
+	private setMatPaginatorStrings(): void {
+		//Localize the paginator
+		this.translate.get([
+			'HERO_LIST.PAGINATOR_ITEMS_PER_PAGE',
+			'HERO_LIST.PAGINATOR_NEXT_PAGE',
+			'HERO_LIST.PAGINATOR_PREV_PAGE'])
+			.subscribe((result: { [key: string]: string }) => {
+
+				this.matPagLocalization.itemsPerPageLabel = result['HERO_LIST.PAGINATOR_ITEMS_PER_PAGE'];
+				this.matPagLocalization.nextPageLabel = result['HERO_LIST.PAGINATOR_NEXT_PAGE'];
+				this.matPagLocalization.previousPageLabel = result['HERO_LIST.PAGINATOR_NEXT_PAGE'];
+			});
 	}
 
 	/**

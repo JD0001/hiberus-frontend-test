@@ -5,8 +5,8 @@
 	<section id="language-selection">
 		<button mat-fab [matMenuTriggerFor]="langSelector"><mat-icon>language</mat-icon></button>
 		<mat-menu #langSelector>
-			<a mat-menu-item (click)="setLocaleTo('es')">Español</a>
-			<a mat-menu-item (click)="setLocaleTo('en')">English</a>
+			<button mat-menu-item (click)="setLocaleTo('es')">Español</button>
+			<button mat-menu-item (click)="setLocaleTo('en')">English</button>
 		</mat-menu>
 	</section>
 </header>

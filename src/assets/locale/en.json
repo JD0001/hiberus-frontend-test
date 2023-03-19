@@ -34,7 +34,7 @@
 		"ACTIONS_CREATE_HERO": "Create Hero",
 		"ACTIONS_EDIT_TIP": "For editing or deleting a hero, please use the embedded buttons availables for each one.",
 		"LIST_NO_RESULTS": "There aren't any results",
-		"PAGINATOR_ITEMS_PER_PAGE": "Items per page",
+		"PAGINATOR_ITEMS_PER_PAGE": "Items per page:",
 		"PAGINATOR_NEXT_PAGE": "Next page",
 		"PAGINATOR_PREV_PAGE": "Previous page"
 	},

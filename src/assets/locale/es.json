@@ -34,7 +34,7 @@
 		"ACTIONS_CREATE_HERO": "Crear héroe",
 		"ACTIONS_EDIT_TIP": "Para editar o eliminar un héroe, por favor usa los controles embedidos disponibles para cada uno",
 		"LIST_NO_RESULTS": "No se encontraron resultados",
-		"PAGINATOR_ITEMS_PER_PAGE": "Elementos por página",
+		"PAGINATOR_ITEMS_PER_PAGE": "Elementos por página:",
 		"PAGINATOR_NEXT_PAGE": "Siguiente página",
 		"PAGINATOR_PREV_PAGE": "Página anterior"
 	},

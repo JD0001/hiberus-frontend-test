@@ -12,6 +12,9 @@
       ],
       "@app/shared/*":[
         "app/shared/*"
+      ],
+	  "@app/assets/*":[
+        "app/assets/*"
       ]
     },
     "resolveJsonModule": true,

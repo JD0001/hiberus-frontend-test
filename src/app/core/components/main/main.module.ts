@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
+import { CookieModule } from 'ngx-cookie';
 
 @NgModule({
 	declarations: [
@@ -22,6 +23,7 @@ import { TranslateModule } from '@ngx-translate/core';
 		MatButtonModule,
 		MatMenuModule,
 		MatIconModule,
+		CookieModule.withOptions(),
 		TranslateModule.forChild({
 			extend: true
 		})

@@ -62,8 +62,8 @@
 </section>
 <mat-card id="card-table" class="card-stylized">
 	<mat-card-content>
-		<mat-paginator #listPaginator [length]="heroesList.data.length" [pageSize]="5"
-			[pageSizeOptions]="[3,5,50,100]"></mat-paginator>
+		<mat-paginator #listPaginator [length]="heroesList.data.length" [pageSize]="10"
+			[pageSizeOptions]="[5,10,50,100]"></mat-paginator>
 		<mat-table matSort [dataSource]="heroesList">
 			<ng-container matColumnDef="alias">
 				<mat-header-cell *matHeaderCellDef mat-sort-header>{{'HERO.ALIAS' | translate }}</mat-header-cell>

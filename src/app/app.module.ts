@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderModule } from '@app/shared/components/loader/loader.module';
 import { LoaderInterceptor } from '@app/shared/interceptors/loader.interceptor';
 import { NgxTranslatorModule } from '@app/shared/modules/translator/translate.module';
+import { CookieModule } from 'ngx-cookie';
 
 
 @NgModule({
@@ -23,13 +24,15 @@ import { NgxTranslatorModule } from '@app/shared/modules/translator/translate.mo
 		HttpClientModule,
 		HeroListModule,
 		LoaderModule,
-		NgxTranslatorModule
+		NgxTranslatorModule,
+		CookieModule.withOptions()
 	],
-	providers: [{
-		provide: HTTP_INTERCEPTORS,
-		useClass: LoaderInterceptor,
-		multi: true,
-	}],
+	providers: [
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: LoaderInterceptor,
+			multi: true,
+		}],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

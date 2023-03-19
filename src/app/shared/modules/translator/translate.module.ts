@@ -7,7 +7,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 export function HttpLoaderFactory(http: HttpClient): TranslateLoader {
 	return new TranslateHttpLoader(
 		http,
-		'../../../../assets/locale/',
+		'/assets/locale/',
 		'.json'
 	);
 }
